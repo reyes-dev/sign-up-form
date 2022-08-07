@@ -124,24 +124,42 @@ div.form_container > * {
   font-size: 14px !important;
 }
 
-input[type="submit"] {
+input {
+  width: 100%;
+  padding: 6px 20px;
+  margin: 8px 0;
+  display: block;
+  outline: none;
+  border: 1px solid black;
+  border-radius: 4px;
+  box-sizing: border-box;
+
+}
+
+input:focus {
+  outline: none;
+  border: 1px solid blue;
+  box-shadow: 1px 1px 1px black;
+}
+
+input:not(:focus):invalid {
+  border: 1px solid red;
+  border-radius: 4px;
+}
+
+input:not(:focus):not(:placeholder-shown):valid {
+  border: 1px solid green;
+  border-radius: 4px;
+}
+
+button {
   width: 25%;
   background-color: #596D48;
   color: white;
   padding: 14px 20px;
   margin: 8px 0;
   border: none;
+  box-shadow: none;
   border-radius: 8px;
   cursor: pointer;
-}
-
-input {
-  width: 100%;
-  padding: 6px 20px;
-  margin: 8px 0;
-  display: block;
-  border: 1px solid #E5E7EB;
-  border-radius: 4px;
-  box-sizing: border-box;
-
 }

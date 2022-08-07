@@ -23,43 +23,45 @@
         <p>Sign up now to get started.</p>
         <p>You know you want to.</p>
         <div class="form_container">
+          <form action="example.com/path" method="post">
           <fieldset>
             <label for="firstName">
               FIRST NAME
-              <input type="text" id="firstName">
+              <input type="text" id="firstName" name="first_name" placeholder=" ">
             </label>
 
             <label for="lastName">
               LAST NAME
-              <input type="text" id="lastName">
+              <input type="text" id="lastName" name="last_name" placeholder=" ">
             </label>
           </fieldset>
 
           <fieldset>
             <label for="email">
               EMAIL
-              <input type="email" id="email">
+              <input type="email" id="email" name="email" placeholder=" " required>
             </label>
 
             <label for="phoneNumber">
               PHONE NUMBER
-              <input type="tel" id="phoneNumber">
+              <input type="tel" id="phoneNumber" name="phone_number" placeholder=" ">
             </label>
           </fieldset>
 
           <fieldset>
             <label for="password">
               PASSWORD
-              <input type="password" id="password">
+              <input type="password" id="password" name="password" placeholder=" " required>
             </label>
 
             <label for="passwordConfirm">
               CONFIRM PASSWORD
-              <input type="password" id="passwordConfirm">
+              <input type="password" id="passwordConfirm" name="password" placeholder=" " required>
             </label>
+          </form>
           </fieldset>
         </div>
-        <input type="submit" value="Create Account">
+        <button>Create Account</button>
         <p>Already have an account? <a href="">Log in</a></p>
       </div>
     </div>
