@@ -68,6 +68,8 @@ fieldset {
 
 .row div:first-child > div:first-child {
   display: flex;
+  flex-direction: row;
+  justify-content: center;
   align-items: center;
   position: absolute;
   z-index: 1;
@@ -75,19 +77,14 @@ fieldset {
   width: 100%;
   top: 20%;
   background: rgb(0, 0, 0, .5);
-  overflow: auto;
 }
 
 .row div:first-child > div:first-child > img {
-  position: absolute;
-  height: 80%;
-  top: 10%;
-  left: 25%;
+  height: 120px;
+  width: 108px;
 }
 
 .row div:first-child > div:first-child > p {
-  position: absolute;
-  left: 200px;
   font-size: 6rem;
   color: white;
   font-family: 'Norse Bold';
