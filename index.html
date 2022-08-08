@@ -7,7 +7,6 @@
   <title>Sign-up Form</title>
   <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
   <div class="row">
     <div class="column">
@@ -23,7 +22,7 @@
         <p>Sign up now to get started.</p>
         <p>You know you want to.</p>
         <div class="form_container">
-          <form action="example.com/path" method="post">
+          <form>
           <fieldset>
             <label for="firstName">
               FIRST NAME
@@ -49,22 +48,40 @@
           </fieldset>
 
           <fieldset>
-            <label for="password">
+            <label for="pass">
               PASSWORD
-              <input type="password" id="password" name="password" placeholder=" " required>
+              <input type="password" id="pass" name="pass" placeholder=" " required>
             </label>
 
-            <label for="passwordConfirm">
+            <label for="confirm_pass">
               CONFIRM PASSWORD
-              <input type="password" id="passwordConfirm" name="password" placeholder=" " required>
+              <input type="password" id="confirm_pass" name="confirm_pass" placeholder=" " onkeyup="validate_password()" required>
             </label>
-          </form>
           </fieldset>
+
+            <button id="create" class="submit_btn" onclick="wrong_pass_alert()">Create Account</button>
+          </form>
         </div>
-        <button>Create Account</button>
         <p>Already have an account? <a href="">Log in</a></p>
       </div>
     </div>
   </div>
 </body>
+<script>
+  var password = document.getElementById("pass")
+  var confirm_password = document.getElementById("confirm_pass");
+  
+  function validatePassword(){
+    if(pass.value != confirm_pass.value) {
+      confirm_pass.setCustomValidity("Passwords Don't Match");
+      pass.setCustomValidity("Passwords Don't Match");
+    } else {
+      confirm_pass.setCustomValidity('');
+      pass.setCustomValidity('');
+    }
+  }
+  
+  pass.onchange = validatePassword;
+  confirm_pass.onkeyup = validatePassword;
+  </script>
 </html>
